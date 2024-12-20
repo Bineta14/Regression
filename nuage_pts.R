@@ -52,9 +52,5 @@ mexp <- nls(y ~ a * b^x, start = list(a = 1, b = 1))
 plot(x, y, main="Régression exponentielle", pch=19) #,xlim=c(-0.5,1))
 lines(x, predict(mexp), col="darkgreen",lwd=2)
 
-# bmodèle logistic
-library(minpack.lm)
-mlogt <- nlsLM(y ~ L / (1 + exp(-k * (x - x0)))+ C, 
-           start = list(L = max(y), x0 = median(x), k = 1,C=min(y)))
-plot(x, y, main="Régression exponentielle", pch=19) #,xlim=c(-0.5,1))
-lines(x, predict(mlogt), col="darkgreen",lwd=2)
+# modèle logistic
+Ne marche pas encore
